@@ -1,0 +1,4 @@
+1) sending props from parent to child and vice versa.(done)
+2) child addresses the props name and not the actual function, props are immutable .
+3)  class components, need of render(), when constructor comes into play, why super()
+use of this keyword in class components.

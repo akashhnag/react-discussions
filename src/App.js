@@ -2,23 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import FunctionalComponent from './components/FunctionalComponent';
+import ClassComponent from './components/ClassComponent';
+
 function App() {
+  function getProps(param) {
+    console.log(param);
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FunctionalComponent msg='message from parent to function' getPropsAttribute={getProps}></FunctionalComponent>
+      <ClassComponent msg='message from parent to class' getPropsAttribute={getProps}></ClassComponent>
     </div>
   );
 }
